@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { Route, Routes } from "react-router-dom";
+import Profile from "./pages/Profile";
+import PaymentPort from "./pages/PaymentPort";
+import ConfirmPayment from "./pages/ConfirmPayment";
+import { GlobalContext } from "./utils/Context";
 
-function App() {
+const App = () => {
+  const { state } = useContext(GlobalContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={
+          state.step === "Personal Info" ? (
+            <Profile />
+          ) : state.step === "Billing Info" ? (
+            <PaymentPort />
+          ) : (
+            <ConfirmPayment />
+          )
+        }
+      />
+    </Routes>
   );
-}
+};
 
 export default App;

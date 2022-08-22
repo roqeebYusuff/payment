@@ -1,0 +1,17 @@
+.main_wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(162deg, #f2c94c47 45%, #fff 25%);
+    padding: 3rem 0;
+    .wrapper{
+        width: 70%;
+        h4{
+            color: $purple;
+        }
+        .main-content{
+            margin-top: 2.5rem;
+        }
+    }
+}

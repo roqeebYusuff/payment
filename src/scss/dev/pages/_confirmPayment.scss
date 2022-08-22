@@ -1,0 +1,15 @@
+.confirm {
+  .wrapper {
+    .completed {
+      border: none;
+      display: flex;
+      align-items: center;
+      .wrap {
+        width: 70%;
+        .home{
+            color: $orange;
+        }
+      }
+    }
+  }
+}

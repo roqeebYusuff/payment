@@ -1,0 +1,53 @@
+.form-control,
+.form-select {
+  box-shadow: none !important;
+  border-color: #000 !important;
+  background-color: #fff !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.form-label {
+  font-weight: 700;
+  color: #000000;
+  .required {
+    color: #eb5757;
+  }
+}
+
+.small-text {
+  display: block;
+  color: $light-blue;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.action-btns {
+  margin-top: 2rem;
+  button {
+    border-radius: 10px !important;
+    border: none;
+    box-shadow: none !important;
+    font-weight: 700;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    &.next-btn {
+      background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
+      width: 30%;
+      margin-right: 1.5rem;
+    }
+    &.cancel-btn {
+      background-color: transparent;
+      color: $purple;
+    }
+  }
+}
+
+.card {
+  .card-header {
+    background-color: #2f80ed;
+    color: #fff;
+  }
+  .border-none {
+    border: none;
+  }
+}

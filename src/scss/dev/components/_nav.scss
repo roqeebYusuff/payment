@@ -1,0 +1,31 @@
+.navtab{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+        bottom: -10px;
+    }   
+    .nav-links{
+        font-weight: 600;
+        font-size: 24px;
+        text-decoration: none;
+        color: $gray4;
+        text-transform: capitalize;
+        &.active-link{
+            position: relative;
+            color: $orange;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                width: 100%;
+                height: 6px;
+                border-radius: 3px;
+                background-color: $orange;
+            }
+        }
+    }
+}
