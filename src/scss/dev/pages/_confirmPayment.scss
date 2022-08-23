@@ -1,13 +1,29 @@
 .confirm {
   .wrapper {
+    display: flex;
+    justify-content: center;
     .completed {
       border: none;
       display: flex;
       align-items: center;
+      width: 60%;
+      padding: 4rem 0 !important;
       .wrap {
         width: 70%;
-        .home{
-            color: $orange;
+        .icon {
+          text-align: center;
+          margin-bottom: 1rem;
+          div {
+            display: inline-block;
+            border-radius: 50%;
+          }
+        }
+        h3{
+          color: $purple;
+          font-weight: 700;
+        }
+        .home {
+          color: $orange;
         }
       }
     }

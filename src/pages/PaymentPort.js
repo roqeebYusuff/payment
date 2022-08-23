@@ -8,6 +8,7 @@ import {
   Row,
   Card,
   CardHeader,
+  CardBody,
 } from "reactstrap";
 import Main from "../layouts/Main";
 import { GlobalContext } from "../utils/Context";
@@ -50,7 +51,7 @@ function Home() {
                 </Label>
                 <Input id="cardType" name="cardType" type="select">
                   <option>Visa</option>
-                  <option>Visa</option>
+                  <option>Master Card</option>
                 </Input>
               </FormGroup>
             </Col>
@@ -106,28 +107,32 @@ function Home() {
             <CardHeader>
               <div className="d-flex justify-content-between px-3 card-head">
                 <span>Item Name</span>
-                <span>Item Name</span>
+                <span>&#8358; Price</span>
               </div>
             </CardHeader>
-            <div className="content px-4 mt-3">
-              <div className="d-flex justify-content-between">
-                <span>Data Science and usability</span>
-                <span>50,000.00</span>
+            <CardBody className="px-4">
+              <div className="content px-4 my-3">
+                <div className="d-flex justify-content-between">
+                  <span className="text-purple">
+                    Data Science and usability
+                  </span>
+                  <span className="text-purple fw-bold">50,000.00</span>
+                </div>
+                <div className="d-flex justify-content-between mt-4">
+                  <span className="text-purple">Shipping</span>
+                  <span>0.00</span>
+                </div>
               </div>
-              <div className="d-flex justify-content-between">
-                <span>Shipping</span>
-                <span>0.00</span>
+              <div className="">
+                <hr />
               </div>
-            </div>
-            <div className="px-4">
-              <hr />
-            </div>
-            <div className="border mx-4 mb-3 px-2 py-2 rounded">
-              <div className="d-flex justify-content-between">
-                <span>Total</span>
-                <span>50,000.00</span>
+              <div className="border mx-4 mb-3 px-2 py-2 rounded">
+                <div className="d-flex justify-content-between">
+                  <span>Total</span>
+                  <span className="text-purple fw-bold">50,000.00</span>
+                </div>
               </div>
-            </div>
+            </CardBody>
           </Card>
 
           <div className="action-btns">
